@@ -1,2 +1,5 @@
 .idea/
 books_catalog2.iml
+out/
+target/
+lib/
