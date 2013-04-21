@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.custom.i18n.resources" value="messages" />
+    <!--<constant name="struts.action.extension" value="" />-->
+
+    <package name="public" extends="struts-default" namespace="/">
+
+        <action name="index" class="com.app.actions.IndexAction">
+            <result name="success">/views/index.jsp</result>
+            <result name="home" type="redirect">search</result>
+        </action>
+
+        <action name="login" class="com.app.actions.LoginAction">
+            <result name="success" type="redirect">search</result>
+            <result name="input">/views/index.jsp</result>
+        </action>
+
+    </package>
+
+    <package name="private" extends="struts-default" namespace="/">
+
+        <interceptors>
+            <interceptor name="authentication" class="com.app.util.AuthenticationInterceptor" />
+            <interceptor-stack name="privateStack">
+                <interceptor-ref name="authentication" />
+                <interceptor-ref name="defaultStack" />
+            </interceptor-stack>
+        </interceptors>
+
+        <default-interceptor-ref name="privateStack" />
+
+        <global-results>
+            <result name="login" type="redirect">index</result>
+        </global-results>
+
+        <action name="search" class="com.app.actions.SearchAction">
+            <result name="success">/views/search.jsp</result>
+        </action>
+
+        <action name="logout" class="com.app.actions.LogoutAction">
+            <result name="success" type="redirect">index</result>
+        </action>
+
+        <action name="settings" class="com.app.actions.SettingsAction">
+            <result name="success">/views/settings.jsp</result>
+        </action>
+
+        <action name="add-book" class="com.app.actions.AddBookAction">
+            <interceptor-ref name="store">
+                <param name="operationMode">RETRIEVE</param>
+            </interceptor-ref>
+            <interceptor-ref name="privateStack" />
+
+            <result name="input">/views/add-book.jsp</result>
+            <result name="success">/views/add-book.jsp</result>
+        </action>
+
+        <action name="save-book" class="com.app.actions.SaveBookAction">
+            <interceptor-ref name="store">
+                <param name="operationMode">STORE</param>
+            </interceptor-ref>
+            <interceptor-ref name="privateStack" />
+
+            <result name="success" type="redirect">add-book</result>
+            <result name="input" type="redirect">add-book</result>
+        </action>
+
+        <action name="book" class="com.app.actions.BookAction">
+            <interceptor-ref name="store">
+                <param name="operationMode">RETRIEVE</param>
+            </interceptor-ref>
+            <interceptor-ref name="privateStack" />
+
+            <result name="input">/views/book.jsp</result>
+            <result name="success">/views/book.jsp</result>
+        </action>
+
+        <action name="save-settings" class="com.app.actions.SaveSettingsAction">
+            <result name="input">/views/settings.jsp</result>
+            <result name="success">/views/settings.jsp</result>
+        </action>
+
+    </package>
+
+</struts>

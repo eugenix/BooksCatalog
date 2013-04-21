@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.app.actions</OriginalElement>
+  <nodes>
+    <node x="461.25" y="-189.0">com.app.actions.BaseAction</node>
+    <node x="807.0" y="169.0">com.app.actions.BookAction</node>
+    <node x="249.0" y="34.0">com.app.actions.SettingsAction</node>
+    <node x="270.0" y="139.0">com.app.actions.SearchAction</node>
+    <node x="719.0" y="-119.0">com.app.actions.LogoutAction</node>
+    <node x="659.0" y="-37.0">com.app.actions.LoginAction</node>
+    <node x="563.0" y="159.0">com.app.actions.SaveSettingsAction</node>
+    <node x="218.0" y="-42.0">com.app.actions.IndexAction</node>
+    <node x="214.0" y="-113.0">com.app.actions.AddBookAction</node>
+    <node x="0.0" y="159.0">com.app.actions.SaveBookAction</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.app.actions.BookAction" target="com.app.actions.BaseAction">
+      <point x="0.0" y="-65.0" />
+      <point x="913.5" y="109.0" />
+      <point x="598.875" y="109.0" />
+      <point x="58.125" y="44.5" />
+    </edge>
+    <edge source="com.app.actions.SaveSettingsAction" target="com.app.actions.BaseAction">
+      <point x="0.0" y="-75.0" />
+      <point x="675.0" y="119.0" />
+      <point x="560.125" y="119.0" />
+      <point x="19.375" y="44.5" />
+    </edge>
+    <edge source="com.app.actions.SettingsAction" target="com.app.actions.BaseAction">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.app.actions.LoginAction" target="com.app.actions.BaseAction">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.app.actions.SearchAction" target="com.app.actions.BaseAction">
+      <point x="0.0" y="-95.0" />
+      <point x="406.5" y="119.0" />
+      <point x="521.375" y="119.0" />
+      <point x="-19.375" y="44.5" />
+    </edge>
+    <edge source="com.app.actions.AddBookAction" target="com.app.actions.BaseAction">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.app.actions.IndexAction" target="com.app.actions.BaseAction">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.app.actions.LogoutAction" target="com.app.actions.BaseAction">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.app.actions.SaveBookAction" target="com.app.actions.BaseAction">
+      <point x="0.0" y="-75.0" />
+      <point x="125.0" y="109.0" />
+      <point x="482.625" y="109.0" />
+      <point x="-58.125" y="44.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="534.5" y="50.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

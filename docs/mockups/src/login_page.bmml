@@ -1,0 +1,71 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1086" measuredH="563" mockupW="945" mockupH="538">
+  <controls>
+    <control controlID="0" controlTypeID="__group__" x="141" y="25" w="940" h="394" measuredW="940" measuredH="394" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <controlName>tb-navbar</controlName>
+      </controlProperties>
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::RoundButton" x="0" y="0" w="940" h="44" measuredW="32" measuredH="32" zOrder="0" locked="false" isInGroup="0">
+          <controlProperties>
+            <align>left</align>
+            <color>3355443</color>
+            <shape>roundRect</shape>
+            <text/>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::SubTitle" x="12" y="7" w="-1" h="-1" measuredW="151" measuredH="27" zOrder="1" locked="false" isInGroup="0">
+          <controlProperties>
+            <color>16777215</color>
+            <text>BooksCatalog</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="__group__" x="279" y="117" w="403" h="277" measuredW="403" measuredH="277" zOrder="2" locked="false" isInGroup="0">
+          <controlProperties>
+            <controlName>Simple%20Login%20Screen</controlName>
+          </controlProperties>
+          <groupChildrenDescriptors>
+            <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="403" h="277" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="2">
+              <controlProperties>
+                <color>15132390</color>
+              </controlProperties>
+            </control>
+            <control controlID="1" controlTypeID="com.balsamiq.mockups::TextInput" x="42" y="96" w="318" h="-1" measuredW="76" measuredH="27" zOrder="1" locked="false" isInGroup="2">
+              <controlProperties>
+                <text>Username</text>
+              </controlProperties>
+            </control>
+            <control controlID="2" controlTypeID="com.balsamiq.mockups::TextInput" x="42" y="158" w="318" h="-1" measuredW="70" measuredH="27" zOrder="2" locked="false" isInGroup="2">
+              <controlProperties>
+                <text>Password</text>
+              </controlProperties>
+            </control>
+            <control controlID="3" controlTypeID="com.balsamiq.mockups::Button" x="269" y="200" w="91" h="-1" measuredW="54" measuredH="27" zOrder="3" locked="false" isInGroup="2">
+              <controlProperties>
+                <text>Login</text>
+              </controlProperties>
+            </control>
+            <control controlID="4" controlTypeID="com.balsamiq.mockups::Title" x="0" y="9" w="397" h="-1" measuredW="75" measuredH="21" zOrder="4" locked="false" isInGroup="2">
+              <controlProperties>
+                <align>center</align>
+                <size>18</size>
+                <text>Welcome</text>
+              </controlProperties>
+            </control>
+            <control controlID="5" controlTypeID="com.balsamiq.mockups::Label" x="42" y="71" w="-1" h="-1" measuredW="62" measuredH="21" zOrder="5" locked="false" isInGroup="2">
+              <controlProperties>
+                <text>Username</text>
+              </controlProperties>
+            </control>
+            <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="42" y="133" w="-1" h="-1" measuredW="56" measuredH="21" zOrder="6" locked="false" isInGroup="2">
+              <controlProperties>
+                <text>Password</text>
+              </controlProperties>
+            </control>
+            <control controlID="7" controlTypeID="com.balsamiq.mockups::HelpButton" x="370" y="15" w="-1" h="-1" measuredW="18" measuredH="18" zOrder="7" locked="false" isInGroup="2"/>
+          </groupChildrenDescriptors>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::HRule" x="141" y="553" w="945" h="-1" measuredW="100" measuredH="10" zOrder="1" locked="false" isInGroup="-1"/>
+  </controls>
+</mockup>

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <user id="1" login="admin" password="password"/>
+
+    <book id="1"
+        title="Горе от ума"
+        description="Горе от ума"
+        imageUrl="https://static.ozone.ru/multimedia/books_covers/c200/1002999646.jpg"
+        authorName="Александр Грибоедов"
+        publisher="Азбука"
+        isbn="1234512345"
+        price="200.99"/>
+
+    <book id="2"
+          title="Братья Карамазовы"
+          description="Братья Карамазовы"
+          imageUrl="https://static.ozone.ru/multimedia/books_covers/c200/1002999646.jpg"
+          authorName="Федор Достоевский"
+          publisher="Эксмо"
+          isbn="5432154321"
+          price="300.00"/>
+
+    <book id="3"
+          title="Преступление и наказание"
+          description="Преступление и наказание"
+          imageUrl="https://static.ozone.ru/multimedia/books_covers/c200/1002999646.jpg"
+          authorName="Федор Достоевский"
+          publisher="Азбука-Аттикус"
+          isbn="0987654321"
+          price="530.00"/>
+
+    <book id="4"
+          title="Идиот"
+          description="Идиот"
+          imageUrl="https://static.ozone.ru/multimedia/books_covers/c200/1002999646.jpg"
+          authorName="Федор Достоевский"
+          publisher="Азбука-Аттикус"
+          isbn="1111111111"
+          price="140.00"/>
+
+    <book id="5"
+          title="Отцы и дети"
+          description="Отцы и дети"
+          imageUrl="https://static.ozone.ru/multimedia/books_covers/c200/1002999646.jpg"
+          authorName="Иван Тургенев"
+          publisher="Азбука-Аттикус"
+          isbn="2222222222"
+          price="150.99"/>
+
+</dataset>
