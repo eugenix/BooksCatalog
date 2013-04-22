@@ -132,23 +132,35 @@ public class BookServiceImpl extends User implements BookService {
                 session.close();
             }
         }
-        return book;
+        return  book;
     }
 
     /**
-     * Build org.hibernate.Criteria object
+     * Delete book bu id
      *
-     * @param searchCriteria instance of SearchCriteria
-     * @param session hibernate session
-     *
-     * @return org.hibernate.Criteria object
+     * @param id book id
      */
-    private Criteria buildCriteria(SearchCriteria searchCriteria, Session session) {
-        return session.createCriteria(Book.class)
-            .add(Restrictions.like("title", "%" + searchCriteria.getTitle() + "%"))
-            .add(Restrictions.like("authorName", "%" + searchCriteria.getAuthorName() + "%"))
-            .add(Restrictions.like("publisher", "%" + searchCriteria.getPublisher() + "%"))
-            .add(Restrictions.like("isbn", "%" + searchCriteria.getIsbn() + "%"));
+    @Override
+    public void deleteById(int id) {
+        Session session = null;
+
+        try {
+            Book book = findById(id);
+
+            if (book != null)  {
+                session = HibernateUtil.getSession();
+                session.beginTransaction();
+                session.delete(book);
+                session.getTransaction().commit();
+            }
+        } catch (Exception e) {
+            log.error(e);
+
+        } finally {
+            if (session != null && session.isOpen()) {
+                session.close();
+            }
+        }
     }
 
     /**
@@ -164,9 +176,9 @@ public class BookServiceImpl extends User implements BookService {
         try {
             session = HibernateUtil.getSession();
             List books = session.createCriteria(Book.class)
-                .add(Restrictions.eq("isbn", isbn))
-                .setMaxResults(1)
-                .list();
+                    .add(Restrictions.eq("isbn", isbn))
+                    .setMaxResults(1)
+                    .list();
 
             if (!books.isEmpty())
                 book = (Book) books.get(0);
@@ -181,5 +193,22 @@ public class BookServiceImpl extends User implements BookService {
         }
         return book;
 
+    }
+
+
+    /**
+     * Build org.hibernate.Criteria object
+     *
+     * @param searchCriteria instance of SearchCriteria
+     * @param session hibernate session
+     *
+     * @return org.hibernate.Criteria object
+     */
+    private Criteria buildCriteria(SearchCriteria searchCriteria, Session session) {
+        return session.createCriteria(Book.class)
+            .add(Restrictions.like("title", "%" + searchCriteria.getTitle() + "%"))
+            .add(Restrictions.like("authorName", "%" + searchCriteria.getAuthorName() + "%"))
+            .add(Restrictions.like("publisher", "%" + searchCriteria.getPublisher() + "%"))
+            .add(Restrictions.like("isbn", "%" + searchCriteria.getIsbn() + "%"));
     }
 }

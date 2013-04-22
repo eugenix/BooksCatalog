@@ -12,7 +12,7 @@ public abstract class BaseDBUnitTest extends DBTestCase {
         super(name);
 
         System.setProperty(PropertiesBasedJdbcDatabaseTester.DBUNIT_DRIVER_CLASS, "com.mysql.jdbc.Driver");
-        System.setProperty(PropertiesBasedJdbcDatabaseTester.DBUNIT_CONNECTION_URL,"jdbc:mysql://192.168.0.43:3306/books_catalog");
+        System.setProperty(PropertiesBasedJdbcDatabaseTester.DBUNIT_CONNECTION_URL, "jdbc:mysql://192.168.11.230:3306/books_catalog");
         System.setProperty(PropertiesBasedJdbcDatabaseTester.DBUNIT_USERNAME, "root");
         System.setProperty(PropertiesBasedJdbcDatabaseTester.DBUNIT_PASSWORD, "toor");
         System.setProperty(PropertiesBasedJdbcDatabaseTester.DBUNIT_SCHEMA, "books_catalog");

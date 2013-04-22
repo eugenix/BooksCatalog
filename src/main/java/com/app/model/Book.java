@@ -75,7 +75,7 @@ public class Book {
         return title;
     }
 
-    @RequiredStringValidator(key = "title.required")
+    @RequiredStringValidator(key = "title.required", message = "--", fieldName = "11")
     @StringLengthFieldValidator(message = "Title: max length ${maxLength} ", minLength = "1",  maxLength = "255")
     public void setTitle(String tittle) {
         this.title = tittle;

@@ -47,4 +47,12 @@ public interface BookService {
      * @return instance of Book
      */
     public Book findById(int id);
+
+
+    /**
+     * Delete book bu id
+     *
+     * @param id book id
+     */
+    void deleteById(int id);
 }

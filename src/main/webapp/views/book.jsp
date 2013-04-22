@@ -75,7 +75,9 @@
 
                     <div class="form-actions">
                         <button type="submit" class="btn btn-large btn-primary">Save</button>
-                        <button type="button" class="btn btn-large">Cancel</button>
+                        <s:a action="delete" cssClass="btn btn-large btn-danger">Delete
+                            <s:param name='bookId' value='%{book.id}'/>
+                        </s:a>
                     </div>
 
                 </fieldset>

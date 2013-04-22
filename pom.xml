@@ -5,7 +5,7 @@
     <groupId>com.app</groupId>
     <artifactId>BooksCatalog</artifactId>
     <packaging>war</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <name>BooksCatalog</name>
     <description>BooksCatalog</description>
 
@@ -102,8 +102,6 @@
             <scope>test</scope>
         </dependency>
 
-
-        <!--  Struts 2 -->
         <dependency>
             <groupId>org.apache.struts</groupId>
             <artifactId>struts2-core</artifactId>
@@ -123,7 +121,6 @@
             <scope>test</scope>
         </dependency>
 
-
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
@@ -138,7 +135,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- Hibernate -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -178,7 +174,7 @@
     </dependencies>
 
     <build>
-        <finalName>app</finalName>
+        <finalName>BooksCatalog</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>

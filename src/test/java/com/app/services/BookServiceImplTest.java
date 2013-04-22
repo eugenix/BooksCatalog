@@ -139,4 +139,10 @@ public class BookServiceImplTest extends BaseDBUnitTest {
         book = service.findByISBN("");
         assertNull(book);
     }
+
+    public void testDeleteById () throws Exception {
+        assertNotNull(service.findById(1));
+        service.deleteById(1);
+        assertNull(service.findById(1));
+    }
 }

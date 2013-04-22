@@ -26,7 +26,7 @@ public class SaveBookAction extends BaseAction implements ModelDriven<Book> {
      *
      * @return book instance
      */
-    @VisitorFieldValidator(message = "", appendPrefix = true)
+    @VisitorFieldValidator(message = "", appendPrefix = false)
     @Override
     public Book getModel() {
         return book;

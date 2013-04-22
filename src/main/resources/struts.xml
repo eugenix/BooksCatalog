@@ -86,6 +86,11 @@
             <result name="success">/views/settings.jsp</result>
         </action>
 
+        <action name="delete" class="com.app.actions.DeleteBookAction">
+            <result name="success" type="redirect">search</result>
+            <result name="input" type="redirect">search</result>
+        </action>
+
     </package>
 
 </struts>
