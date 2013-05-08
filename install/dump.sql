@@ -2,7 +2,8 @@
 SQLyog Ultimate v10.42 
 MySQL - 5.1.58-1ubuntu1-log : Database - books_catalog
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -42,9 +43,10 @@ DROP TABLE IF EXISTS `user`;
 
 CREATE TABLE `user` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Идентификатор пользователя',
-  `login` varchar(64) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
+  `login` varchar(64) NOT NULL COMMENT 'Логин',
+  `password` varchar(255) NOT NULL COMMENT 'Пароль',
+  PRIMARY KEY (`id`),
+  KEY `idx_login_password` (`login`,`password`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='Сущность пользователь';
 
 /*Data for the table `user` */
